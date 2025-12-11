@@ -1,0 +1,39 @@
+<section id="Articles" class="articles">
+  <div class="articles-2">
+    <div class="headline-6">Latest articles</div>
+    <div class="articles-3">
+      <div *ngFor="let article of articles" class="article">
+        <img
+          [src]="article.image"
+          loading="lazy"
+          width="300"
+          height="209"
+          [alt]="article.category + ' article image'"
+          [srcset]="article.image.replace('.png', '-p-500.png') + ' 500w, ' + article.image + ' 600w'"
+          sizes="(max-width: 991px) 290px, 29vw"
+          class="image"
+        />
+        <div [class]="articles.indexOf(article) === 0 ? 'content-4' : 'content-5'">
+          <div class="copy">
+            <div class="headline-7">
+              <div class="text-2">{{ article.category }}</div>
+              <div class="text-3">{{ article.date }}</div>
+            </div>
+            <div class="body-2">{{ article.title }}</div>
+          </div>
+          <div class="author">
+            <img
+              [src]="article.authorImage"
+              loading="lazy"
+              width="44"
+              height="44"
+              [alt]="article.authorName"
+              class="ellipse-10"
+            />
+            <div class="text-4">{{ article.authorName }}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

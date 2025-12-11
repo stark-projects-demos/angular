@@ -1,0 +1,38 @@
+<footer id="Footer" class="footer-2">
+  <div class="frame-13896">
+    <div class="frame-13895">
+      <div class="logo-2">TeamSync</div>
+      <div class="frame-13897">
+        <img *ngFor="let icon of socialIcons"
+          [src]="icon.image"
+          loading="lazy"
+          width="29.01435661315918"
+          height="29.01435661315918"
+          [alt]="icon.alt"
+          class="vectors-wrapper-10"
+        />
+      </div>
+    </div>
+    <div class="frame-13898">
+      <a *ngFor="let link of columnOneLinks" 
+         [href]="link.url" 
+         [class]="link.class">
+        {{ link.text }}
+      </a>
+    </div>
+    <div class="frame-13898">
+      <a *ngFor="let link of columnTwoLinks" 
+         [href]="link.url" 
+         [class]="link.class">
+        {{ link.text }}
+      </a>
+    </div>
+    <div class="frame-13899">
+      <a *ngFor="let link of columnThreeLinks" 
+         [href]="link.url" 
+         [class]="link.class">
+        {{ link.text }}
+      </a>
+    </div>
+  </div>
+</footer>
